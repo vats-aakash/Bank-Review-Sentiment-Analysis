@@ -1,0 +1,9 @@
+from wordcloud import WordCloud
+
+positive_text = " ".join(df[df.sentiment=="Positive"]["text"])
+
+WordCloud(
+    width=800,
+    height=400,
+    background_color='white'
+).generate(positive_text)
